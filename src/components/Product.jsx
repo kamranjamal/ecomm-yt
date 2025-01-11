@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Product() {
   return (
@@ -15,7 +16,9 @@ function Product() {
       </div>
       <div className="flex justify-between">
         <p>category</p>
-        <button className="bg-black text-white p-2 rounded-md">View Product</button>
+        <button className="bg-black text-white p-2 rounded-md">
+            <Link to={"/product/2"}>Details</Link>
+        </button>
       </div>
     </div>
   );

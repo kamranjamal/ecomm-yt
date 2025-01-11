@@ -1,21 +1,16 @@
 import React from 'react'
-import Product from './components/Product'
-import Navbar from './components/Navbar'
+import { Route, Routes } from 'react-router-dom'
+import Home from './components/Home'
+import SingleProduct from './components/SingleProduct'
 
 function App() {
-
   return (
-   <div >
-    <Navbar/>
-     <div className='p-4'>
-      
-      <div className='flex gap-3 flex-wrap justify-center'>
-      {
-        [1,2,3,4,5,6,7,8,9,10].map((item) => <Product key={item}/>)
-      }
-      </div>
+    <div>
+      <Routes>
+        <Route path='/' element={<Home/>}/>
+        <Route path='/product/:id' element={<SingleProduct/>}></Route>
+      </Routes>
     </div>
-   </div>
   )
 }
 
